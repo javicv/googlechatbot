@@ -40,6 +40,13 @@ class CardBuilder():
         self._card.sections.append(section)
         return self
 
+    def add_text_paragraph_widget(self, text):
+        section = self._card.sections[-1]
+        widget = {}
+        widget["text"] = text
+        section["widgets"].append({"textParagraph": widget})
+        return self
+
     def add_image_widget(self, image_url, click_url=None):
         section = self._card.sections[-1]
         widget = {}
