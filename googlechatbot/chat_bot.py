@@ -1,3 +1,4 @@
+from dataclasses import asdict
 import json
 import requests
 from .chat_card import Card
@@ -12,7 +13,7 @@ class GoogleChatBot():
         return self.__send_message(json.dumps(msg))
 
     def send_card_message(self, card: Card) -> int:
-        msg = {"cards": [card.to_dict()]}
+        msg = {"cards": [asdict(card)]}
         return self.__send_message(json.dumps(msg))
 
     def __send_message(self, msg: str) -> int:

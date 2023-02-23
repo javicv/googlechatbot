@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setup(
     name='googlechatbot',
-    version='1.1.1',
+    version='1.2.0',
     description='A small package to simplify the creation of Google Chat Bots',
     long_description=readme,
     long_description_content_type="text/markdown",
